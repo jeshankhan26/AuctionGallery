@@ -1,6 +1,7 @@
 import './App.css'
 import Navbar from './Components/navbar.jsx'
 import Hero from './Components/hero.jsx'
+import Footer from './Components/Footer.jsx'
 
 function App() {
  
@@ -9,6 +10,7 @@ function App() {
     <>
   <Navbar/>
   <Hero/>
+  <Footer/>
     </>
   )
 }
