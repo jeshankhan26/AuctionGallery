@@ -19,7 +19,7 @@ const navbar = () => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-3xl text-[#003EA4]">Auction <span className='text-[#FFD337]'>Gallery</span> </a>
+    <a className="text-3xl text-[#003EA4]">Auction <span className='text-[#FFD337]'>Gallery</span> </a>
   </div>
   <div className="navbar-center grid grid-flow-col ">
     <ul className="grid grid-flow-col px-1 gap-10 text-xl poppins">
