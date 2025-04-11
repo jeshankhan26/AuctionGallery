@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "title": "Vintage Leather Jacket",
+      "description": "A classic brown vintage leather jacket in excellent condition.",
+      "currentBidPrice": 75.50,
+      "timeLeft": "2h 15m",
+      "bidsCount": 12,
+      "image": "https://i.ibb.co.com/wrCsYndR/download-1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Antique Wooden Clock",
+      "description": "Elegant 19th-century wooden clock with intricate carvings.",
+      "currentBidPrice": 230.00,
+      "timeLeft": "1d 4h",
+      "bidsCount": 25,
+      "image": "https://i.ibb.co.com/4ZxyxVxS/download-2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Gaming Laptop - RTX 3070",
+      "description": "High-performance gaming laptop with Intel i7, 16GB RAM, and RTX 3070 GPU.",
+      "currentBidPrice": 1200.99,
+      "timeLeft": "5h 30m",
+      "bidsCount": 8,
+      "image": "https://i.ibb.co.com/0wMKkx0/download-3.jpg"
+    },
+    {
+      "id": 4, 
+      "title": "Messi Football Jersey",
+      "description": "Official club jersey signed by all players of the 2022 season.",
+      "currentBidPrice": 340.00,
+      "timeLeft": "3d 1h",
+      "bidsCount": 30,
+      "image": "https://i.ibb.co.com/RkzDZMHf/download-4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Wireless Noise Cancelling Headphones",
+      "description": "Top-rated noise cancelling headphones with 30-hour battery life.",
+      "currentBidPrice": 145.75,
+      "timeLeft": "12h 45m",
+      "bidsCount": 18,
+      "image": "https://i.ibb.co.com/WpM1mY6k/download-5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Handmade Ceramic Vase",
+      "description": "Beautifully crafted handmade ceramic vase with a floral design.",
+      "currentBidPrice": 20,
+      "timeLeft": "4d 22h",
+      "bidsCount": 5,
+      "image": "https://i.ibb.co.com/fzr0Zbt3/download-6.jpg"
+    }
+  ]
+  
