@@ -1,15 +1,30 @@
-import React from 'react';
-import { FaRegHeart } from "react-icons/fa";
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
+import img1 from '../../public/heart-svgrepo-com.png';
+import img2 from '../../public/red-heart-svgrepo-com.png';
+
 const Blog = ({ blog, handleBookmark }) => {
-  const notify = () => toast(`Add ${blog.title} Successfully`, {
-    autoClose: 3000, 
-    closeButton: true, 
-    hideProgressBar: false,
-    pauseOnHover: true, 
-    draggable: true, 
-  });
+  const [bookmarked, setBookmarked] = useState(false);
+
+  const notify = () =>
+    toast(`Add ${blog.title} Successfully`, {
+      autoClose: 3000,
+      closeButton: true,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+    });
+
+  const ButtonBookmark = () => {
+    setBookmarked(!bookmarked);
+  };
+
+  const handleClick = () => {
+    handleBookmark(blog);
+    notify();
+    ButtonBookmark();
+  };
 
   return (
     <tr className="border-b border-[#DCE5F3]">
@@ -22,11 +37,9 @@ const Blog = ({ blog, handleBookmark }) => {
       <td>${blog.currentBidPrice}</td>
       <td>{blog.timeLeft}</td>
       <td className="pl-8">
-        <button onClick={() => { handleBookmark(blog); notify();  }}>
-          <FaRegHeart className="h-7 " />
-         
+        <button onClick={handleClick}>
+          <img src={bookmarked ? img2 : img1} alt="bookmark" className='w-5'/>
         </button>
-        
       </td>
     </tr>
   );

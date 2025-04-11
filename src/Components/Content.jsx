@@ -20,7 +20,6 @@ const Content = () => {
       
     }
   };
-  console.log(Bit)
 
   const handleRemoveBookmark = (id) => {
     const removedItem = Bookmark.find((item) => item.id === id);
