@@ -29,6 +29,7 @@ const Blogs = ({handleBookmark}) => {
       </tr>
     </thead>
     <tbody>
+      
       {
         blogs.map((blog, index) => (
           <Blog handleBookmark={handleBookmark} key={blog.id || index} blog={blog} />

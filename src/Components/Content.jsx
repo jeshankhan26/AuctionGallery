@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import { FaRegHeart } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import { toast } from 'react-toastify';
 
 import Blogs from './Blogs';
 
+  const notify = () =>
+    toast(`Remove Data Successfully`, {
+      autoClose: 3000,
+      closeButton: true,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+    });
 const Content = () => {
   const [Bookmark, setBookmark] = useState([]);
 
@@ -25,6 +34,7 @@ const Content = () => {
     const removedItem = Bookmark.find((item) => item.id === id);
     const updatedBookmarks = Bookmark.filter((item) => item.id !== id);
     setBookmark(updatedBookmarks);
+
   
     if (removedItem) {
       const newCount = parseFloat(Bit) - parseFloat(removedItem.currentBidPrice);
@@ -62,8 +72,15 @@ const Content = () => {
             <hr className='border-[#DCE5F3] my-3' />
 
             {/* Favourites List */}
+
             <div className='min-h-[100px]'>
               {
+                Bookmark.length === 0 ? (
+                  <div className="text-center space-y-1">
+                    <h1 className='sora front-medium text-xl'>No favorites yet</h1>
+                    <h1 className='text-gray-500 sora'>Click the heart icon on any item <br />to add it to your favorites</h1>
+                  </div>
+                ) :
                 Bookmark.map((maked) => (
                   <div key={maked.id} className="grid gap-7">
                     <div className="border-b border-[#DCE5F3] pl-3">
@@ -84,9 +101,13 @@ const Content = () => {
                         </div>
 
                         {/* Close Button */}
-                        <button onClick={() => handleRemoveBookmark(maked.id)}>
+                        <button onClick={() => {
+                          handleRemoveBookmark(maked.id);
+                          notify();
+                        }}>
                           <IoClose className="w-5 h-5 text-gray-500 hover:text-red-500 transition" />
                         </button>
+
                       </div>
                     </div>
                   </div>
